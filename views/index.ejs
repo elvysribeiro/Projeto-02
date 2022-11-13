@@ -7,8 +7,17 @@
     <title>PlayList-Songs</title>
   </head>
   <body>
-    <h1>Hello ejs</h1>
+    <h1>PlayList-Songs</h1>
 
     <a href="/admin">Administração</a>
+
+    <% playlist.forEach((music)=>{ %>
+    <section>
+      <h2><%= music.name%></h2>
+      <p><%= music.author%></p>
+      <img src="<%= music.linkImage%>" alt="Imagem da música" />
+      <audio controls src="<%= music.linkMusic%>"></audio>
+    </section>
+    <% }) %>
   </body>
 </html>
